@@ -8,6 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${workspaceFolder}/one_two_step.c",
+                "${workspaceFolder}/main.c",
                 "-o",
                 "${workspaceFolder}/out"
             ],

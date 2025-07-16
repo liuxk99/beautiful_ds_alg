@@ -6,23 +6,11 @@
 // 使用递归函数实现
 int one_two_step(int n)
 {
+    if (n < 1)
+        return 0;
     if (n == 1)
         return 1;
-    else if (n == 2)
+    if (n == 2)
         return 2;
-    else
-        return one_two_step(n - 1) + one_two_step(n - 2);
-}
-
-int main()
-{
-    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    printf("one_two_step： \n");
-    for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++)
-    {
-        int steps = array[i];
-        printf("steps: %d, climbs: %d\n", steps, one_two_step(steps));
-    }
-
-    return 0;
+    return one_two_step(n - 1) + one_two_step(n - 2);
 }
